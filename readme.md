@@ -1,4 +1,4 @@
-Infosection to display all references to a page in a list.
+Infosection to display all references to a page or file in a list.
 
 # Install
 ## Download Zip file
@@ -6,7 +6,9 @@ Infosection to display all references to a page in a list.
 Copy plugin folder into `site/plugins`
 
 ## Composer
-not yet available
+```
+composer require visionbites/usage-reference
+```
 
 # Usage
 Add a section `usageReference` to your blueprint to show references to the current page.
