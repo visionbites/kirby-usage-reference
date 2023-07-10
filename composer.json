@@ -1,0 +1,23 @@
+{
+	"name": "visionbites/usage-reference",
+	"description": "Show references to a page or file on the objects blueprint.",
+	"license": "MIT",
+	"type": "kirby-plugin",
+	"authors": [
+		{
+			"name": "Philip Kuban",
+			"email": "kuban@visionbites.de"
+		}
+	],
+	"keywords": [
+		"kirby3",
+		"kirby3-cms",
+		"kirby3-plugin"
+	],
+	"extra": {
+		"installer-name": "usage-reference"
+	},
+	"require": {
+		"getkirby/composer-installer": "^1.1"
+	}
+}
