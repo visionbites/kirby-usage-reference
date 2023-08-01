@@ -26,26 +26,26 @@ panel.plugin('visionbites/usage-reference', {
         <table  >
           <thead>
           <tr>
-            <th class="k-table-column">
+            <th class="k-table-column" data-mobile>
               title
             </th>
-            <th class="k-table-column">
+            <th class="k-table-column" data-mobile>
               template
             </th>
-            <th class="k-table-column">
+            <th class="k-table-column" data-mobile>
               breadcrumb
             </th>
           </tr>
           </thead>
           <tbody>
           <tr v-for="reference in references">
-            <td class="k-table-column " style="padding-left: 0.75em">
+            <td class="k-table-column " data-mobile style="padding-left: 0.75em">
               {{ reference.title }}
             </td>
-            <td class="k-table-column"  style="padding-left: 0.75em">
+            <td class="k-table-column"  data-mobile style="padding-left: 0.75em">
               {{ reference.template }}
             </td>
-            <td class="k-table-column">
+            <td class="k-table-column" data-mobile>
               <k-breadcrumb :crumbs="reference.breadcrumb" view="table" />
             </td>
           </tr>
