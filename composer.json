@@ -3,6 +3,7 @@
 	"description": "Show references to a page or file on the objects blueprint.",
 	"license": "MIT",
 	"type": "kirby-plugin",
+	"version": "1.0.1",
 	"authors": [
 		{
 			"name": "Philip Kuban",

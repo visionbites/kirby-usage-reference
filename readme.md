@@ -5,6 +5,11 @@ Infosection to display all references to a page or file in a list.
 
 Copy plugin folder into `site/plugins`
 
+## Git submodule
+```
+git submodule add https://github.com/visionbites/kirby-usage-reference.git site/plugins/usage-reference
+```
+
 ## Composer
 ```
 composer require visionbites/usage-reference
