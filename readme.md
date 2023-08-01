@@ -1,26 +1,29 @@
-Infosection to display all references to a page or file in a list.
+# Kirby usage reference plugin
+Infosection to display all references to a page in a list.
 
-# Install
-## Download Zip file
+![preview](preview.jpg)
+
+## Install
+### Download Zip file
 
 Copy plugin folder into `site/plugins`
 
-## Git submodule
+### Git submodule
 ```
 git submodule add https://github.com/visionbites/kirby-usage-reference.git site/plugins/usage-reference
 ```
 
-## Composer
+### Composer
 ```
 composer require visionbites/usage-reference
 ```
 
-# Usage
+## Usage
 Add a section `usageReference` to your blueprint to show references to the current page.
 Add a `template` key to define the type of pages you are looking for.
 
 
-## Example
+### Example
 Basic setup:
 
 ```yaml
