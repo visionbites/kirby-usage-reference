@@ -55,7 +55,30 @@ sections:
         type: usageReference
 ```
 
+## Options
+
+there is only one option at the moment:
+
+| Option   | Default | Description                                                                              |
+|----------|---------|------------------------------------------------------------------------------------------|
+| `expire` | `15`    | the cache will expire after n minutes. Minimum is 1 as a indefinite cache makes no sense |
+
+
+set the options in `config.php`:
+
+```php
+return [
+	'visionbites.usage-reference' => [
+		'expire' => 15 // in minutes
+	],
+];
+```
+
+please keep in mind that this might lead to showing out of date data to the editor if there was another reference added.
+
+
 ## todos
+- [ ] clear cache for a page on update of a referencing page
 - [ ] make it pick up on text links
 
 ## License
