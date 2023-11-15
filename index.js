@@ -1,21 +1,44 @@
 panel.plugin('visionbites/usage-reference', {
-  sections: {
-    usageReference: {
-      data: function () {
-        return {
-          headline: null,
-          references: Array
-        }
-      },
+	sections: {
+		usageReference: {
+			data: function () {
+				return {
+					headline: null,
+					references: Array,
+					items: Array
+				}
+			},
 
-      created: function() {
-        this.load().then(response => {
-          this.headline = response.headline;
-          this.references = response.references;
-        });
-      },
+			created: function () {
+				this.load().then(response => {
+					this.headline = response.headline;
+					this.references = response.references;
+					let items = [];
 
-      template: `
+					this.references.forEach(reference => {
+						items.push({
+							preview: [
+								{
+									image: {
+										icon: "page",
+										back: "black",
+										color: "white"
+									},
+									text: reference.title,
+									link: reference.breadcrumb[reference.breadcrumb.length - 1].link,
+								}
+							],
+							title: reference.title,
+							template: reference.template,
+							breadcrumb: reference.breadcrumb,
+						})
+					});
+
+					this.items = items;
+				});
+			},
+
+			template: `
 <template>
   <section class="k-usage-references-section">
     <header v-if="headline" class="k-section-header">
@@ -38,7 +61,7 @@ panel.plugin('visionbites/usage-reference', {
           </tr>
           </thead>
           <tbody>
-          <tr v-for="reference in references">
+          <tr v-for="reference in items">
             <td class="k-table-column " data-mobile style="padding-left: 0.75em">
               {{ reference.title }}
             </td>
@@ -46,7 +69,7 @@ panel.plugin('visionbites/usage-reference', {
               {{ reference.template }}
             </td>
             <td class="k-table-column" data-mobile>
-              <k-breadcrumb :crumbs="reference.breadcrumb" view="table" />
+              <k-pages-field-preview :value="reference.preview"/>
             </td>
           </tr>
           </tbody>
@@ -55,6 +78,6 @@ panel.plugin('visionbites/usage-reference', {
     </template>
   </section>
 </template>`
-    }
-  }
+		}
+	}
 });
