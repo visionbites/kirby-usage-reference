@@ -4,7 +4,8 @@ panel.plugin('visionbites/usage-reference', {
 			data: function () {
 				return {
 					headline: null,
-					references: Array
+					references: Array,
+					items: Array
 				}
 			},
 
