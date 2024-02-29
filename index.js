@@ -4,8 +4,7 @@ panel.plugin('visionbites/usage-reference', {
 			data: function () {
 				return {
 					headline: null,
-					references: Array,
-					items: Array
+					references: Array
 				}
 			},
 
@@ -49,26 +48,26 @@ panel.plugin('visionbites/usage-reference', {
         <table  >
           <thead>
           <tr>
-            <th class="k-table-column" data-mobile>
+            <th class="k-table-column" data-mobile="true">
               title
             </th>
-            <th class="k-table-column" data-mobile>
+            <th class="k-table-column" data-mobile="true">
               template
             </th>
-            <th class="k-table-column" data-mobile>
-              breadcrumb
+            <th class="k-table-column" data-mobile="true">
+              page
             </th>
           </tr>
           </thead>
           <tbody>
           <tr v-for="reference in items">
-            <td class="k-table-column " data-mobile style="padding-left: 0.75em">
+            <td class="k-table-column " data-mobile="true" style="padding-left: 0.75em">
               {{ reference.title }}
             </td>
-            <td class="k-table-column"  data-mobile style="padding-left: 0.75em">
+            <td class="k-table-column"  data-mobile="true" style="padding-left: 0.75em">
               {{ reference.template }}
             </td>
-            <td class="k-table-column" data-mobile>
+            <td class="k-table-column" data-mobile="true">
               <k-pages-field-preview :value="reference.preview"/>
             </td>
           </tr>
