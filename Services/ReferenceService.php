@@ -68,6 +68,7 @@ class ReferenceService
 					'breadcrumb' => $refPage->panel()->breadcrumb(),
 					'uuid' => $refPage->uuid()->toString(),
 					'template' => $refPage->intendedTemplate()->name(),
+                    'status' => $refPage->isDraft() ? 'draft' : ($refPage->isUnlisted() ? 'unlisted': 'listed'),
 				];
 			}
 			$data = $references;

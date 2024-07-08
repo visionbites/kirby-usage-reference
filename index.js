@@ -16,12 +16,28 @@ panel.plugin('visionbites/usage-reference', {
 					let items = [];
 
 					this.references.forEach(reference => {
+						let back;
+						switch (reference.status) {
+							case "listed":
+								back = "var(--color-positive)";
+								break;
+							case "unlisted":
+								back = "var(--color-blue)";
+								break;
+							case "draft":
+								back = "var(--color-negative)";
+								break;
+							default:
+								back = "var(--color-black)";
+								break;
+						}
+
 						items.push({
 							preview: [
 								{
 									image: {
 										icon: "page",
-										back: "black",
+										back: back,
 										color: "white"
 									},
 									text: reference.title,
