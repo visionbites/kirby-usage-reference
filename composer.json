@@ -2,7 +2,7 @@
 	"name": "visionbites/usage-reference",
 	"description": "Show references to a page or file on the objects blueprint.",
 	"license": "MIT",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"type": "kirby-plugin",
 	"authors": [
 		{
