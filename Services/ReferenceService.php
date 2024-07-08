@@ -59,10 +59,10 @@ class ReferenceService
 
 			$references = [];
 			foreach ($usedItems as $item) {
-				$refPage = site()->findPageOrDraft($item['uri']);
+				$refPage = site()->findPageOrDraft($item['uri']) ?? site()->draft($item['uri']);
 
 				$references[] = [
-					'title' => $refPage->title()->value,
+					'title' => $refPage->title()->value ?? '',
 					'url' => $refPage->url(),
 					'slug' => $refPage->slug(),
 					'breadcrumb' => $refPage->panel()->breadcrumb(),
