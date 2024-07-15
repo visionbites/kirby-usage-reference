@@ -49,6 +49,8 @@ class ReferenceService
 						// if the content is not pretty printed, the uuid might be masked
 						$maskedUuid = str_replace('/', '\/', $uuid);
 
+						if (is_null($datum) || trim($datum) === "") continue;
+
 						if (str_contains($datum, $uuid) || str_contains($datum, $maskedUuid)) {
 							$hasMatch = true;
 						};
